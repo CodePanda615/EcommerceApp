@@ -7,7 +7,7 @@ from schemas.user_schema import RegisterSchema, LoginSchema, UserMeResponse
 
 from utils.helper import token
 from passlib.context import CryptContext
-1
+
 router = APIRouter(
     prefix="/api/users/auth",
     tags=["User Authentication"]

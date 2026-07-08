@@ -1,0 +1,55 @@
+version: "3.9"
+
+services:
+
+  postgres:
+    image: postgres:16
+    container_name: ecommerce-db
+
+    restart: always
+
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: ecommerce
+
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  backend:
+    build:
+      context: ./ecommerce_backend
+
+    container_name: ecommerce-backend
+
+    restart: always
+
+    ports:
+      - "8000:8000"
+
+    depends_on:
+      - postgres
+
+    environment:
+      DATABASE_URL: ${DATABASE_URL}
+      SENDGRID_API: ${SENDGRID_API}
+
+  frontend:
+    build:
+      context: ./ecomm_frontend
+
+    container_name: ecommerce-frontend
+
+    restart: always
+
+    ports:
+      - "80:80"
+
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:

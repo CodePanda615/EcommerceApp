@@ -4,13 +4,14 @@ from fastapi import (
 
 from utils.connection import (
     engine,
-    Base,
+    Base
 )
 
 from fastapi.middleware.cors import CORSMiddleware
 
 origins = [
-    "http://localhost:5173",  # Vite
+    "http://localhost:80",
+      "*"  # Vite
 ]
 
 from routers.admin.categories import router as category_router
@@ -31,7 +32,11 @@ from routers.users.banners import router as user_banners
 from routers.users.reviews import router as user_reviews
 from routers.users.guest_checkout import router as guest_checkout
 
+from utils.seed import seed_db
+
 Base.metadata.create_all(bind=engine)
+seed_db()
+
 tags_metadata = [
     {
         "name": "Admin Authentication",

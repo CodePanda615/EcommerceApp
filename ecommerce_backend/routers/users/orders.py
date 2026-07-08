@@ -29,7 +29,7 @@ router = APIRouter(
 def send_order_confirmation_email(user_email: str, user_name: str, order_id: int, total_amount: float, order_date: str):
     """Send order confirmation email using SendGrid"""
     try:
-        sendgrid_api_key = os.getenv("SENDGRID_APIKEY")
+        sendgrid_api_key = os.getenv("SENDGRID_APIKEY") 
         if not sendgrid_api_key:
             print("Error: SENDGRID_APIKEY not found in environment variables")
             return False

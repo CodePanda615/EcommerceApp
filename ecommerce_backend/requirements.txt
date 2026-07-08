@@ -1,12 +1,46 @@
 fastapi
-uvicorn
+uvicorn[standard]
+
+# Database
 sqlalchemy
 psycopg2-binary
-python-jose
-passlib[bcrypt]
-bcrypt
-python-dotenv
 alembic
-email-validator
-python-multipart
+
+# Authentication
+python-jose[cryptography]
+passlib==1.7.4
+bcrypt==4.0.1
+
+# Environment
+python-dotenv
+
+# Validation
 pydantic
+email-validator
+
+# Forms
+python-multipart
+
+# HTTP
+httpx
+requests
+
+# Email
+fastapi-mail
+jinja2
+sendgrid
+
+# Images
+pillow
+
+# Utilities
+python-dateutil
+
+# Testing
+pytest
+pytest-asyncio
+
+# Production
+
+gunicorn
+sendgrid

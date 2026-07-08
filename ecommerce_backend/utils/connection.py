@@ -1,10 +1,11 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
+import os
 
 # Use SQLite for development
 
-DATABASE_URL = "postgresql+psycopg2://postgres:123@localhost:5432/ecommerse_database"
+DATABASE_URL = os.getenv("DATABASE_URL")
 
 engine = create_engine(DATABASE_URL)
 
@@ -15,7 +16,6 @@ SessionLocal = sessionmaker(
 )
 
 Base = declarative_base()
-
 
 # Database Dependency
 def get_db():
