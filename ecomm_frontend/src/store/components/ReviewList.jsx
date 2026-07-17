@@ -15,8 +15,8 @@ export default function ReviewList({ productId, userId }) {
     try {
       setLoading(true);
       const [reviewsRes, statsRes] = await Promise.all([
-        fetch(`http://localhost:8000/api/users/reviews/products/${productId}`),
-        fetch(`http://localhost:8000/api/users/reviews/products/${productId}/stats`),
+        fetch(`http://13.234.30.65:8000/api/users/reviews/products/${productId}`),
+        fetch(`http://13.234.30.65:8000/api/users/reviews/products/${productId}/stats`),
       ]);
 
       const reviewsData = await reviewsRes.json();
@@ -37,7 +37,7 @@ export default function ReviewList({ productId, userId }) {
     try {
       const token = localStorage.getItem("token");
       const response = await fetch(
-        `http://localhost:8000/api/users/reviews/${reviewId}`,
+        `http://13.234.30.65:8000/api/users/reviews/${reviewId}`,
         {
           method: "DELETE",
           headers: {

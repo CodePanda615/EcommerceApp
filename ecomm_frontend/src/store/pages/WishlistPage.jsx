@@ -49,7 +49,7 @@ export default function WishlistPage() {
     }
 
     // Add to logged-in user's cart
-    fetch("http://localhost:8000/api/users/cart", {
+    fetch("http://13.234.30.65:8000/api/users/cart", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

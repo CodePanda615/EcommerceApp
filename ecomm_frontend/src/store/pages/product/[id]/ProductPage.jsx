@@ -30,7 +30,7 @@ export default function ProductPage() {
   const userId = user?.id;
 
   useEffect(() => {
-    fetch(`http://localhost:8000/api/users/products/${id}`)
+    fetch(`http://13.234.30.65:8000/api/users/products/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setProduct(data);
@@ -72,7 +72,7 @@ export default function ProductPage() {
         return;
       }
 
-      const res = await fetch("http://localhost:8000/api/users/cart", {
+      const res = await fetch("http://13.234.30.65:8000/api/users/cart", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -306,7 +306,7 @@ export default function ProductPage() {
                   try {
                     // Add to cart
                     const token = localStorage.getItem("token");
-                    const res = await fetch("http://localhost:8000/api/users/cart", {
+                    const res = await fetch("http://13.234.30.65:8000/api/users/cart", {
                       method: "POST",
                       headers: {
                         "Content-Type": "application/json",

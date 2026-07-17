@@ -29,7 +29,7 @@ export default function ReviewForm({ productId, onReviewAdded, isLoggedIn }) {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        `http://localhost:8000/api/users/reviews/products/${productId}`,
+        `http://13.234.30.65:8000/api/users/reviews/products/${productId}`,
         {
           method: "POST",
           headers: {

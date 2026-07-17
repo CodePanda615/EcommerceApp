@@ -102,8 +102,8 @@ VITE v8.0.12  ready in XXX ms
 - **Coupons**: http://localhost:5173/admin/coupons
 
 ### Backend Documentation
-- **API Docs**: http://localhost:8000/docs (Swagger UI)
-- **ReDoc**: http://localhost:8000/redoc
+- **API Docs**: http://13.234.30.65:8000/docs (Swagger UI)
+- **ReDoc**: http://13.234.30.65:8000/redoc
 
 ---
 
@@ -112,7 +112,7 @@ VITE v8.0.12  ready in XXX ms
 ### Create Admin Account
 Use Postman, curl, or the API docs to register:
 
-**Endpoint**: `POST http://localhost:8000/api/admin/auth/register`
+**Endpoint**: `POST http://13.234.30.65:8000/api/admin/auth/register`
 
 ```json
 {
@@ -125,7 +125,7 @@ Use Postman, curl, or the API docs to register:
 Then login at `/admin/login` with these credentials.
 
 ### Create User Account
-**Endpoint**: `POST http://localhost:8000/api/users/auth/register`
+**Endpoint**: `POST http://13.234.30.65:8000/api/users/auth/register`
 
 ```json
 {
@@ -226,7 +226,7 @@ Always run the bcrypt version fix first (see Step 1 above).
 
 ## 📚 API Documentation
 
-All APIs are documented in Swagger UI. Visit `http://localhost:8000/docs` for:
+All APIs are documented in Swagger UI. Visit `http://13.234.30.65:8000/docs` for:
 - Complete endpoint list
 - Request/response schemas
 - Try-it-out functionality

@@ -36,7 +36,7 @@ export default function StoreHeader({ categories = [] }) {
     const token = localStorage.getItem("token")
     if (isLogged) {
       // Fetch logged-in user's cart
-      fetch("http://localhost:8000/api/users/cart", {
+      fetch("http://13.234.30.65:8000/api/users/cart", {
         headers: { Authorization: `Bearer ${token}` },
       })
         .then((res) => res.json())

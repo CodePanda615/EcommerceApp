@@ -56,7 +56,7 @@ export default function CategoriesBar() {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8000/api/users/categories")
+    fetch("http://13.234.30.65:8000/api/users/categories")
       .then((response) => response.json())
       .then((data) => {
         setCategories(data);

@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const adminApi = axios.create({
-  baseURL: "http://localhost:8000",
+  baseURL: "http://13.234.30.65:8000",
   headers: {
     "Content-Type": "application/json",
   },

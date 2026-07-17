@@ -37,7 +37,7 @@ export default function OrdersPage() {
     const fetchOrders = async () => {
       try {
         const res = await fetch(
-          "http://localhost:8000/api/users/orders",
+          "http://13.234.30.65:8000/api/users/orders",
           {
             headers: {
               Authorization: `Bearer ${token}`,

@@ -52,7 +52,7 @@ export default function GuestCheckoutForm({ cartItems, totalAmount, onSuccess })
     try {
       setLoading(true);
 
-      const response = await fetch("http://localhost:8000/api/guest-checkout", {
+      const response = await fetch("http://13.234.30.65:8000/api/guest-checkout", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

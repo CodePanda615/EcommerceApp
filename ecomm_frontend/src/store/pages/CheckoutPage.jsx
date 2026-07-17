@@ -60,7 +60,7 @@ export default function CheckoutPage() {
           return;
         }
 
-        const res = await fetch("http://localhost:8000/api/users/cart", {
+        const res = await fetch("http://13.234.30.65:8000/api/users/cart", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -132,7 +132,7 @@ export default function CheckoutPage() {
 
         // Create order on backend to get Razorpay order ID
         const orderRes = await fetch(
-          "http://localhost:8000/api/users/orders/razorpay/create",
+          "http://13.234.30.65:8000/api/users/orders/razorpay/create",
           {
             method: "POST",
             headers: {
@@ -167,7 +167,7 @@ export default function CheckoutPage() {
             try {
               // Verify payment on backend
               const verifyRes = await fetch(
-                "http://localhost:8000/api/users/orders/razorpay/verify",
+                "http://13.234.30.65:8000/api/users/orders/razorpay/verify",
                 {
                   method: "POST",
                   headers: {
@@ -215,7 +215,7 @@ export default function CheckoutPage() {
         rzp.open();
       } else {
         // For other payment methods (COD, Card, UPI)
-        const res = await fetch("http://localhost:8000/api/users/orders", {
+        const res = await fetch("http://13.234.30.65:8000/api/users/orders", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

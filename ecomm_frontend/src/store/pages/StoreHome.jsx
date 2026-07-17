@@ -33,9 +33,9 @@ export default function StoreHome() {
       setLoading(true);
       try {
         const [bannersRes, categoriesRes, productsRes] = await Promise.all([
-          fetch("http://localhost:8000/api/user/banner"),
-          fetch("http://localhost:8000/api/users/categories"),
-          fetch("http://localhost:8000/api/users/products"),
+          fetch("http://13.234.30.65:8000/api/user/banner"),
+          fetch("http://13.234.30.65:8000/api/users/categories"),
+          fetch("http://13.234.30.65:8000/api/users/products"),
         ]);
 
         const bannersData = await bannersRes.json();

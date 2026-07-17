@@ -42,7 +42,7 @@ export default function ProductCard({ product }) {
         return;
       }
 
-      const res = await fetch("http://localhost:8000/api/users/cart", {
+      const res = await fetch("http://13.234.30.65:8000/api/users/cart", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -21,7 +21,7 @@ export default function CartPage() {
     try {
       if (token) {
         // Fetch logged-in user's cart
-        const res = await fetch("http://localhost:8000/api/users/cart", {
+        const res = await fetch("http://13.234.30.65:8000/api/users/cart", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -66,7 +66,7 @@ export default function CartPage() {
 
       try {
         for (const item of guestCart) {
-          await fetch("http://localhost:8000/api/users/cart", {
+          await fetch("http://13.234.30.65:8000/api/users/cart", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -101,7 +101,7 @@ export default function CartPage() {
       } else {
         // Remove from API cart
         const res = await fetch(
-          `http://localhost:8000/api/users/cart/${cartId}`,
+          `http://13.234.30.65:8000/api/users/cart/${cartId}`,
           {
             method: "DELETE",
             headers: {
@@ -144,7 +144,7 @@ export default function CartPage() {
       } else {
         // Update API cart
         const res = await fetch(
-          `http://localhost:8000/api/users/cart/${cartId}?quantity=${newQty}`,
+          `http://13.234.30.65:8000/api/users/cart/${cartId}?quantity=${newQty}`,
           {
             method: "PATCH",
             headers: {
