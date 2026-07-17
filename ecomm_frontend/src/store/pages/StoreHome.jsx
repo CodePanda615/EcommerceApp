@@ -96,17 +96,7 @@ export default function StoreHome() {
     <div className="min-h-screen bg-slate-50">
       <StoreHeader categories={categories} />
 
-      {!isLoggedIn && !isSearching && (
-        <div className="bg-purple-200 border-b border-purple-200 px-4 py-2">
-          <div className="max-w-7xl mx-auto flex items-center justify-center gap-2">
-            <span className="text-sm text-zinc-800">👤 Browsing as Guest</span>
-            <span className="text-slate-300">•</span>
-            <Link to="/store/login" className="text-purple-600 hover:text-purple-700 text-sm font-medium">
-              Login for more benefits
-            </Link>
-          </div>
-        </div>
-      )}
+    
 
       {!isSearching && (
         <CategoriesBar />

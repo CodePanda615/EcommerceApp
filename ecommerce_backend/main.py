@@ -11,7 +11,8 @@ from fastapi.middleware.cors import CORSMiddleware
 
 origins = [
     "http://localhost:80",
-      "*"  # Vite
+    "*"  # Vite,
+    "http://13.234.30.65/store"
 ]
 
 from routers.admin.categories import router as category_router
@@ -134,11 +135,10 @@ app.include_router(
 
 app.include_router(guest_checkout)
 
-
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
-    allow_credentials=True,
+    allow_origins=["*"],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
